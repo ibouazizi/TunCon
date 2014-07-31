@@ -18,7 +18,7 @@ public class TunisiaCallHandler extends BroadcastReceiver {
             phoneNumber = intent.getStringExtra(Intent.EXTRA_PHONE_NUMBER);
         }
         // My app will bring up the call, so cancel the broadcast
-        if (phoneNumber.startsWith("+216")) {
+        if (phoneNumber.contains("+216")) {
             setResultData(null);
             // Start my app to bring up the call
             Toast.makeText(context, "Will call " + phoneNumber + " using TunCall", Toast.LENGTH_LONG);

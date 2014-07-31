@@ -16,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.TextView;
 
 
@@ -30,6 +31,8 @@ public class Tuncon extends Activity implements ActionBar.TabListener {
      * {@link android.support.v13.app.FragmentStatePagerAdapter}.
      */
     SectionsPagerAdapter mSectionsPagerAdapter;
+
+    SipClient sip;
 
     /**
      * The {@link ViewPager} that will host the section contents.
@@ -74,6 +77,8 @@ public class Tuncon extends Activity implements ActionBar.TabListener {
                             .setText(mSectionsPagerAdapter.getPageTitle(i))
                             .setTabListener(this));
         }
+
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
     }
 
 
@@ -111,6 +116,9 @@ public class Tuncon extends Activity implements ActionBar.TabListener {
     public void onTabReselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
     }
 
+    public SipClient getSip() {
+        return sip;
+    }
     /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
@@ -125,9 +133,11 @@ public class Tuncon extends Activity implements ActionBar.TabListener {
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
-            if (position == 0)
-                return DialerFragment.newInstance(1);
-            else
+            if (position == 0) {
+                DialerFragment df = DialerFragment.newInstance(1);
+                sip = df.sip;
+                return df;
+            } else
                 return BillingFragment.newInstance(2);
         }
 

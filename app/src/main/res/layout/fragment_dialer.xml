@@ -1,193 +1,222 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
         android:layout_weight="3"
         android:orientation="horizontal"
-        android:layout_gravity="center_horizontal"
-        android:useDefaultMargins="true"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp">
+        android:useDefaultMargins="true">
 
         <TextView
-            android:layout_weight="1"
-            android:layout_height="fill_parent"
-            android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/tvNumber"
-            android:textColor="#ff000000"
-            android:textSize="20pt"
             android:layout_width="wrap_content"
-            android:typeface="monospace"
-            android:singleLine="true"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
             android:gravity="center"
-            android:text="+216 " />
+            android:singleLine="true"
+            android:text="+216 "
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#ff000000"
+            android:textSize="18pt"
+            android:typeface="monospace" />
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_weight="1"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp">
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
-        <Button
-            android:layout_height="fill_parent"
-            android:layout_weight="1"
-            android:text="1"
+        <ImageButton
             android:id="@+id/btn1"
             android:layout_width="wrap_content"
-            android:hint=" " />
-
-        <Button
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:text="2"
+            android:background="?android:attr/selectableItemBackground"
+            android:hint=" "
+            android:src="@drawable/dial_1"
+            android:text="1" />
+
+        <ImageButton
             android:id="@+id/btn2"
             android:layout_width="wrap_content"
-            android:hint="2" />
-
-        <Button
-            android:layout_weight="1"
             android:layout_height="fill_parent"
-            android:text="3"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:hint="2"
+            android:src="@drawable/dial_2"
+            android:text="2" />
+
+        <ImageButton
             android:id="@+id/btn3"
             android:layout_width="wrap_content"
-            android:hint="3" />
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:hint="3"
+            android:src="@drawable/dial_3"
+            android:text="3" />
     </LinearLayout>
 
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_weight="1"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp">
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
-        <Button
-            android:layout_weight="1"
-            android:layout_height="fill_parent"
-            android:text="4"
+        <ImageButton
             android:id="@+id/btn4"
             android:layout_width="wrap_content"
-            android:hint="4" />
-
-        <Button
-            android:layout_weight="1"
             android:layout_height="fill_parent"
-            android:text="5"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:hint="4"
+            android:src="@drawable/dial_4"
+            android:text="4" />
+
+        <ImageButton
             android:id="@+id/btn5"
-            android:layout_row="3"
             android:layout_width="wrap_content"
-            android:hint="5" />
-
-        <Button
-            android:layout_weight="1"
             android:layout_height="fill_parent"
-            android:text="6"
-            android:id="@+id/btn6"
             android:layout_row="3"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:hint="5"
+            android:src="@drawable/dial_5"
+            android:text="5" />
+
+        <ImageButton
+            android:id="@+id/btn6"
             android:layout_width="wrap_content"
-            android:hint="6" />
+            android:layout_height="fill_parent"
+            android:layout_row="3"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:hint="6"
+            android:src="@drawable/dial_6"
+            android:text="6" />
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_weight="1"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp">
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
-        <Button
-            android:layout_weight="1"
-            android:layout_height="fill_parent"
-            android:text="7"
+        <ImageButton
             android:id="@+id/btn7"
             android:layout_width="wrap_content"
-            android:hint="7" />
-
-        <Button
-            android:layout_weight="1"
             android:layout_height="fill_parent"
-            android:text="8"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:hint="7"
+            android:src="@drawable/dial_7"
+            android:text="7" />
+
+        <ImageButton
             android:id="@+id/btn8"
             android:layout_width="wrap_content"
-            android:hint="8" />
-
-        <Button
-            android:layout_weight="1"
             android:layout_height="fill_parent"
-            android:text="9"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:hint="8"
+            android:src="@drawable/dial_8"
+            android:text="8" />
+
+        <ImageButton
             android:id="@+id/btn9"
             android:layout_width="wrap_content"
-            android:hint="9" />
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:hint="9"
+            android:src="@drawable/dial_9"
+            android:text="9" />
     </LinearLayout>
 
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_weight="1"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp">
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
-        <Button
-            android:layout_weight="1"
-            android:layout_height="fill_parent"
-            android:text="*"
+        <ImageButton
             android:id="@+id/btnStar"
-            android:layout_width="wrap_content" />
-
-        <Button
-            android:layout_weight="1"
+            android:layout_width="wrap_content"
             android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/dial_pound"
+            android:text="*" />
+
+        <ImageButton
             android:id="@+id/btn0"
-            android:text="0"
-            android:layout_width="wrap_content" />
-
-        <Button
-            android:layout_weight="1"
+            android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:text="#"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/dial_0"
+            android:text="0" />
+
+        <ImageButton
             android:id="@+id/btnPound"
-            android:layout_width="wrap_content" />
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/dial_star"
+            android:text="#" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="horizontal"
+        android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:layout_marginLeft="5dp">
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
-        <Button
-            android:layout_weight="1"
-            android:layout_height="fill_parent"
+        <ImageButton
             android:id="@+id/btnCall"
-            android:text="dial"
-            android:layout_width="wrap_content" />
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/ic_dial_action_call"
+            android:text="dial" />
 
         <Space
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground" />
 
-        <Button
+        <ImageButton
+            android:id="@+id/btnDelete"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_weight="1"
-            android:id="@+id/btnDelete"
-            android:text="Del"/>
+            android:background="?android:attr/selectableItemBackground"
+            android:src="@drawable/ic_dial_action_delete"
+            android:text="Del" />
 
 
     </LinearLayout>

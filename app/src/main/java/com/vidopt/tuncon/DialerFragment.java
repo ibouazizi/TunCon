@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 /**
@@ -22,7 +23,12 @@ public class DialerFragment extends Fragment {
     private static final String ARG_SECTION_NUMBER = "section_number";
 
     public View rootView = null;
-    SipClient sip = null;
+    public SipClient sip = null;
+
+    public DialerFragment() {
+
+        sip = new SipClient();
+    }
 
     /**
      * Returns a new instance of this fragment for the given section
@@ -36,70 +42,66 @@ public class DialerFragment extends Fragment {
         return fragment;
     }
 
-    public DialerFragment() {
-        sip = new SipClient();
-    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         rootView = inflater.inflate(R.layout.fragment_dialer, container, false);
 
-        Button btn1 = (Button)rootView.findViewById(R.id.btn1);
+        ImageButton btn1 = (ImageButton) rootView.findViewById(R.id.btn1);
         btn1.setTag("1");
         btn1.setOnClickListener(new DialerClickListener());
 
-        Button btn2 = (Button)rootView.findViewById(R.id.btn2);
+        ImageButton btn2 = (ImageButton) rootView.findViewById(R.id.btn2);
         btn2.setTag("2");
         btn2.setOnClickListener(new DialerClickListener());
 
-        Button btn3 = (Button)rootView.findViewById(R.id.btn3);
+        ImageButton btn3 = (ImageButton) rootView.findViewById(R.id.btn3);
         btn3.setTag("3");
         btn3.setOnClickListener(new DialerClickListener());
 
-        Button btn4 = (Button)rootView.findViewById(R.id.btn4);
+        ImageButton btn4 = (ImageButton) rootView.findViewById(R.id.btn4);
         btn4.setTag("4");
         btn4.setOnClickListener(new DialerClickListener());
 
-        Button btn5 = (Button)rootView.findViewById(R.id.btn5);
+        ImageButton btn5 = (ImageButton) rootView.findViewById(R.id.btn5);
         btn5.setTag("5");
         btn5.setOnClickListener(new DialerClickListener());
 
-        Button btn6 = (Button)rootView.findViewById(R.id.btn6);
+        ImageButton btn6 = (ImageButton) rootView.findViewById(R.id.btn6);
         btn6.setTag("6");
         btn6.setOnClickListener(new DialerClickListener());
 
-        Button btn7 = (Button)rootView.findViewById(R.id.btn7);
+        ImageButton btn7 = (ImageButton) rootView.findViewById(R.id.btn7);
         btn7.setTag("7");
         btn7.setOnClickListener(new DialerClickListener());
 
-        Button btn8 = (Button)rootView.findViewById(R.id.btn8);
+        ImageButton btn8 = (ImageButton) rootView.findViewById(R.id.btn8);
         btn8.setTag("8");
         btn8.setOnClickListener(new DialerClickListener());
 
-        Button btn9 = (Button)rootView.findViewById(R.id.btn9);
+        ImageButton btn9 = (ImageButton) rootView.findViewById(R.id.btn9);
         btn9.setTag("9");
         btn9.setOnClickListener(new DialerClickListener());
 
-        Button btn0 = (Button)rootView.findViewById(R.id.btn0);
+        ImageButton btn0 = (ImageButton) rootView.findViewById(R.id.btn0);
         btn0.setTag("0");
         btn0.setOnClickListener(new DialerClickListener());
 
-        Button btnPound = (Button)rootView.findViewById(R.id.btnPound);
+        ImageButton btnPound = (ImageButton) rootView.findViewById(R.id.btnPound);
         btnPound.setTag("Pound");
         btnPound.setOnClickListener(new DialerClickListener());
 
-        Button btnStar = (Button)rootView.findViewById(R.id.btnStar);
+        ImageButton btnStar = (ImageButton) rootView.findViewById(R.id.btnStar);
         btnStar.setTag("Star");
         btnStar.setOnClickListener(new DialerClickListener());
 
 
-        Button btnDel = (Button)rootView.findViewById(R.id.btnDelete);
+        ImageButton btnDel = (ImageButton) rootView.findViewById(R.id.btnDelete);
         btnDel.setTag("Delete");
         btnDel.setOnClickListener(new DialerClickListener());
 
-        Button btnCall = (Button)rootView.findViewById(R.id.btnCall);
+        ImageButton btnCall = (ImageButton) rootView.findViewById(R.id.btnCall);
         btnCall.setTag("Call");
         btnCall.setOnClickListener(new DialerClickListener());
 
@@ -119,7 +121,7 @@ public class DialerFragment extends Fragment {
     public void onStop() {
         super.onStop();
 
-        Log.d("Fragment", "Fragment Start");
+        Log.d("Fragment", "Fragment Stop");
 
         sip.endCall();
         sip.closeLocalProfile();
@@ -132,7 +134,7 @@ public class DialerFragment extends Fragment {
             TextView tv = (TextView)rootView.findViewById(R.id.tvNumber);
             String num = tv.getText().toString();
 
-            Button btn = (Button)v;
+            ImageButton btn = (ImageButton) v;
             String str = btn.getTag().toString();
 
                 if (str == "dial") {
